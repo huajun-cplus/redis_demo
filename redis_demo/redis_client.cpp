@@ -58,6 +58,9 @@ void CRedisClient::release()
 
 	delete m_pcpp_redis_client;
 	m_pcpp_redis_client = nullptr;
+
+	m_a_deque.clear();
+	m_b_deque.clear();
 }
 
 void CRedisClient::run()

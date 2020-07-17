@@ -33,14 +33,15 @@ public:
 
 public:
 	std::future<cpp_redis::reply> send(const std::vector<std::string> &redis_cmd);
-	CRedisClient &send(const std::vector<std::string> &redis_cmd, const cpp_redis::reply_callback_t &callback);
+	CRedisClient & send(const std::vector<std::string> &redis_cmd, const cpp_redis::reply_callback_t &callback);
 
-	CRedisClient &commit();
-	CRedisClient &sync_commit();
+	CRedisClient & commit();
+	CRedisClient & sync_commit();
 
 	template<class Rep, class Period>
-	CRedisClient &sync_commit(const std::chrono::duration<Rep, Period> &timeout) {
-		m_pcpp_redis_client.sync_commit(timeout);
+	CRedisClient & sync_commit(const std::chrono::duration<Rep, Period> &timeout) {
+		m_pcpp_redis_client->sync_commit(timeout);
+		return *this;
 	}
 
 private:
