@@ -57,5 +57,5 @@ private:
 	cpp_redis::client *				m_pcpp_redis_client;
 };
 
-template ChaSingleton<CRedisClient>;
+template class ChaSingleton<CRedisClient>;
 typedef ChaSingleton<CRedisClient> RedisClientInst;

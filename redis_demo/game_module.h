@@ -9,5 +9,5 @@ public:
 	void run();
 };
 
-template ChaSingleton<CGameMoudle>;
+template class ChaSingleton<CGameMoudle>;
 typedef ChaSingleton<CGameMoudle> GameMoudleInst;
