@@ -5,6 +5,7 @@
 #include "toolkit/singleton_template.h"
 #include "cpp_redis/cpp_redis.hpp"
 
+
 class CRedisClient final {
 	struct CRedisActionContext {
 		cpp_redis::reply_callback_t call_back_fun;

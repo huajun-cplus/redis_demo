@@ -11,9 +11,9 @@
 #include "redis_client.h"
 #include "game_module.h"
 
-static char * DEFAULT_REDIS_SERVER_IP = "127.0.0.1";
-static std::size_t DEFAULT_REDIS_PORT = 6379;
-static char * DEFAULT_REDIS_PASSWORD = "a1234567";
+static const char * DEFAULT_REDIS_SERVER_IP = "127.0.0.1";
+static const std::size_t DEFAULT_REDIS_PORT = 6379;
+static const char * DEFAULT_REDIS_PASSWORD = "a1234567";
 
 #ifdef _WIN32
 bool initWinSock()
