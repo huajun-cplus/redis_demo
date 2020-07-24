@@ -25,7 +25,6 @@ void CGameMoudle::run()
 		std::vector<std::string>({"GET", "k1"})
 		, [](cpp_redis::reply &reply) {
 			if (reply.ok()) {
-				std::cout << "这里做业务 在主线程" << std::endl;
 				std::cout << "get ok" << std::endl;
 				if (reply.is_string()) {
 					std::cout << "k1: "<< reply.as_string() << std::endl;
