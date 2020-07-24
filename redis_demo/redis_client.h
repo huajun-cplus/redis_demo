@@ -3,7 +3,7 @@
 #include <mutex>
 
 #include "toolkit/singleton_template.h"
-#include "cpp_redis/cpp_redis.hpp"
+#include "cpp_redis/cpp_redis"
 
 
 class CRedisClient final {
